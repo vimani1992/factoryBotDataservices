@@ -26,11 +26,11 @@ app.get("/getTicketsList", async function (req, res) {
         if (!req.query.userId) {
             res.status(400).send("UserId not entered!")
         }
-        let userId = req.query.userId;
+        let userId = req.query.userId.trim().toLowerCase();
         console.log("userId : ", userId);
         let userTickets = new Set();
         for (let ticketObj of OPEN_TICKETS) {
-            if (ticketObj.assignedToUser === userId) {
+            if (ticketObj.assignedToUser.toLowerCase() === userId) {
                 userTickets.add(ticketObj.ticketId);
             }
         }
@@ -53,10 +53,10 @@ app.get("/getTicketDetails", async function (req, res) {
         if (!req.query.ticketId) {
             res.status(400).send("TicketId not entered!")
         }
-        let ticketId = req.query.ticketId;
+        let ticketId = req.query.ticketId.trim().toLowerCase();
         let returnTicketObj = null;
         for (let ticketObj of OPEN_TICKETS) {
-            if (ticketObj.ticketId === ticketId) {
+            if (ticketObj.ticketId.toLowerCase() === ticketId) {
                 returnTicketObj = ticketObj;
                 break;
             }
