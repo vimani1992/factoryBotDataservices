@@ -13,16 +13,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const routes = require('./routes')
+
+const opticrewRoutes = require('./routes/opticrew');
 const cors = require('cors')
 
-const port = process.env.PORT;
-// const port = 3000
+//const port = process.env.PORT;
+const port = 3000
 app.use(bodyParser.json());
 app.get('/', (req, res) => res.send('App is working'))
 
 app.use(cors())
-app.use('/api', routes)
+app.use('/api/opticrew', opticrewRoutes)
 
 app.listen(port, () => console.log(`Factory bot data services listening on port ${port}`))
 
