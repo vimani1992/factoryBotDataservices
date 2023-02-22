@@ -17,7 +17,7 @@ const getShiftBreakTimings = async (req, res) => {
         SHIFT_BREAK_TIMINGS[daynumber].filter(ele => {
             if (formattedTime >= ele.shiftStartTime && formattedTime <= ele.shiftEndTime) {
                 breakList.push({
-                    "breakName": "break 1",
+                    "breakName": ele.breakName,
                     "breakDescription": ele.breakDescription,
                     "breakStartTime": ele.breakStartTime,
                     "breakEndTime": ele.breakEndTime

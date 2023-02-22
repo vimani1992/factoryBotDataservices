@@ -3,6 +3,7 @@ module.exports = {
         {
             "shiftStartTime" : "06:00:00",
             "shiftEndTime" : "14:00:00",
+             "breakName":"Break",
             "breakStartTime": "10:00:00",
             "breakEndTime" : "10:15:00",
             "breakDescription" : "Tea break",
@@ -14,6 +15,7 @@ module.exports = {
         {
             "shiftStartTime" : "14:00:00",
             "shiftEndTime" : "23:00:00",
+            "breakName":"Break",
             "breakStartTime": "19:00:00",
             "breakEndTime" : "19:15:00",
             "breakDescription" : "Tea break",
@@ -25,6 +27,7 @@ module.exports = {
         {
             "shiftStartTime" : "23:00:00",
             "shiftEndTime" : "06:00:00",
+            "breakName":"Break",
             "breakStartTime": "03:00:00",
             "breakEndTime" : "03:15:00",
             "breakDescription" : "Tea break",
@@ -38,6 +41,7 @@ module.exports = {
         {
             "shiftStartTime" : "06:00:00",
             "shiftEndTime" : "14:00:00",
+            "breakName":"Break",
             "breakStartTime": "10:00:00",
             "breakEndTime" : "10:15:00",
             "breakDescription" : "Tea break 4",
@@ -49,6 +53,7 @@ module.exports = {
         {
             "shiftStartTime" : "14:00:00",
             "shiftEndTime" : "23:00:00",
+            "breakName":"Break",
             "breakStartTime": "19:00:00",
             "breakEndTime" : "19:15:00",
             "breakDescription" : "Tea break",
@@ -60,6 +65,7 @@ module.exports = {
         {
             "shiftStartTime" : "23:00:00",
             "shiftEndTime" : "06:00:00",
+            "breakName":"Break",
             "breakStartTime": "03:00:00",
             "breakEndTime" : "03:15:00",
             "breakDescription" : "Tea break",
@@ -73,6 +79,7 @@ module.exports = {
         {
             "shiftStartTime" : "06:00:00",
             "shiftEndTime" : "14:00:00",
+            "breakName":"Break",
             "breakStartTime": "10:00:00",
             "breakEndTime" : "10:15:00",
             "breakDescription" : "Tea break",
@@ -84,6 +91,7 @@ module.exports = {
         {
             "shiftStartTime" : "14:00:00",
             "shiftEndTime" : "23:00:00",
+            "breakName":"Break",
             "breakStartTime": "19:00:00",
             "breakEndTime" : "19:15:00",
             "breakDescription" : "Tea break",
@@ -95,6 +103,7 @@ module.exports = {
         {
             "shiftStartTime" : "23:00:00",
             "shiftEndTime" : "06:00:00",
+            "breakName":"Break",
             "breakStartTime": "03:00:00",
             "breakEndTime" : "03:15:00",
             "breakDescription" : "Tea break",
@@ -108,6 +117,7 @@ module.exports = {
         {
             "shiftStartTime" : "06:00:00",
             "shiftEndTime" : "14:00:00",
+            "breakName":"Break",
             "breakStartTime": "10:00:00",
             "breakEndTime" : "10:15:00",
             "breakDescription" : "Tea break",
@@ -119,6 +129,7 @@ module.exports = {
         {
             "shiftStartTime" : "14:00:00",
             "shiftEndTime" : "23:00:00",
+            "breakName":"Break",
             "breakStartTime": "19:00:00",
             "breakEndTime" : "19:15:00",
             "breakDescription" : "Tea break",
@@ -130,6 +141,7 @@ module.exports = {
         {
             "shiftStartTime" : "23:00:00",
             "shiftEndTime" : "06:00:00",
+            "breakName":"Break",
             "breakStartTime": "03:00:00",
             "breakEndTime" : "03:15:00",
             "breakDescription" : "Tea break",
@@ -143,6 +155,7 @@ module.exports = {
         {
             "shiftStartTime" : "06:00:00",
             "shiftEndTime" : "14:00:00",
+            "breakName":"Break",
             "breakStartTime": "10:00:00",
             "breakEndTime" : "10:15:00",
             "breakDescription" : "Tea break",
@@ -154,6 +167,7 @@ module.exports = {
         {
             "shiftStartTime" : "14:00:00",
             "shiftEndTime" : "23:00:00",
+            "breakName":"Break",
             "breakStartTime": "19:00:00",
             "breakEndTime" : "19:15:00",
             "breakDescription" : "Tea break",
@@ -165,6 +179,7 @@ module.exports = {
         {
             "shiftStartTime" : "23:00:00",
             "shiftEndTime" : "06:00:00",
+            "breakName":"Break",
             "breakStartTime": "03:00:00",
             "breakEndTime" : "03:15:00",
             "breakDescription" : "Tea break",
@@ -178,6 +193,7 @@ module.exports = {
         {
             "shiftStartTime" : "08:00:00",
             "shiftEndTime" : "16:00:00",
+            "breakName":"Break",
             "breakStartTime": "10:00:00",
             "breakEndTime" : "10:15:00",
             "breakDescription" : "Tea break",
@@ -189,6 +205,7 @@ module.exports = {
         {
             "shiftStartTime" : "16:00:00",
             "shiftEndTime" : "23:00:00",
+            "breakName":"Break",
             "breakStartTime": "19:00:00",
             "breakEndTime" : "19:15:00",
             "breakDescription" : "Tea break",
@@ -200,6 +217,7 @@ module.exports = {
         {
             "shiftStartTime" : "23:00:00",
             "shiftEndTime" : "08:00:00",
+            "breakName":"Break",
             "breakStartTime": "03:00:00",
             "breakEndTime" : "03:15:00",
             "breakDescription" : "Tea break",
@@ -213,6 +231,7 @@ module.exports = {
         {
             "shiftStartTime" : "08:00:00",
             "shiftEndTime" : "16:00:00",
+            "breakName":"Break",
             "breakStartTime": "10:00:00",
             "breakEndTime" : "10:15:00",
             "breakDescription" : "Tea break",
@@ -224,6 +243,7 @@ module.exports = {
         {
             "shiftStartTime" : "16:00:00",
             "shiftEndTime" : "23:00:00",
+            "breakName":"Break",
             "breakStartTime": "19:00:00",
             "breakEndTime" : "19:15:00",
             "breakDescription" : "Tea break",
@@ -235,6 +255,7 @@ module.exports = {
         {
             "shiftStartTime" : "23:00:00",
             "shiftEndTime" : "08:00:00",
+            "breakName":"Break",
             "breakStartTime": "03:00:00",
             "breakEndTime" : "03:15:00",
             "breakDescription" : "Tea break",

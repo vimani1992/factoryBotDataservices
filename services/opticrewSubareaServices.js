@@ -7,19 +7,7 @@ const getSubareaDetails = async (req, res) => {
         if (!req.query.userId) {
             res.status(400).send("UserId not entered!")
         }
-
-        //let userId = req.query.userId;
-        let areaId, subareaDetails;
-        // console.log("userId : ", userId);
-        // console.log("MECHANIC_DETAILS", MECHANIC_DETAILS);
-        // console.log("MECHANIC_DETAILS.userId", MECHANIC_DETAILS[userId]);
-
-        // if (MECHANIC_DETAILS[userId]) {
-        //     areaId = MECHANIC_DETAILS[userId].areaId;
-        //     if (areaId) {
-        //         subareaDetails = SUBAREA_DETAILS[areaId].subarea;
-        //     }
-        // }
+        let subareaDetails;
         subareaDetails = await SubAreaList.subAreas(req, res);
 
         if (subareaDetails) {
