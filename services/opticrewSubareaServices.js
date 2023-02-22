@@ -1,30 +1,32 @@
-const SUBAREA_DETAILS  = require("../constants/area_subarea");
-const MECHANIC_DETAILS  = require("../constants/mechanic_details");
+const SUBAREA_DETAILS = require("../constants/area_subarea");
+const MECHANIC_DETAILS = require("../constants/mechanic_details");
+const SubAreaList = require("../common/SubAreaDetails");
 
 const getSubareaDetails = async (req, res) => {
     try {
         if (!req.query.userId) {
             res.status(400).send("UserId not entered!")
         }
-        
-        let userId = req.query.userId;
+
+        //let userId = req.query.userId;
         let areaId, subareaDetails;
         // console.log("userId : ", userId);
         // console.log("MECHANIC_DETAILS", MECHANIC_DETAILS);
         // console.log("MECHANIC_DETAILS.userId", MECHANIC_DETAILS[userId]);
 
-        if(MECHANIC_DETAILS[userId]){
-            areaId = MECHANIC_DETAILS[userId].areaId;
-            if(areaId){
-                subareaDetails = SUBAREA_DETAILS[areaId].subarea;
-            }
-        }
+        // if (MECHANIC_DETAILS[userId]) {
+        //     areaId = MECHANIC_DETAILS[userId].areaId;
+        //     if (areaId) {
+        //         subareaDetails = SUBAREA_DETAILS[areaId].subarea;
+        //     }
+        // }
+        subareaDetails = await SubAreaList.subAreas(req, res);
 
-        if (subareaDetails.length > 0) {
+        if (subareaDetails) {
             res.send(subareaDetails);
         }
         else {
-            res.send("Mechanic or Mechanic's areaid/subarea details not found.");
+            res.status(400).send("Mechanic or Mechanic's areaid/subarea details not found.");
         }
     }
     catch (err) {

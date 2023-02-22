@@ -40,7 +40,7 @@ module.exports = {
             "shiftEndTime" : "14:00:00",
             "breakStartTime": "10:00:00",
             "breakEndTime" : "10:15:00",
-            "breakDescription" : "Tea break",
+            "breakDescription" : "Tea break 4",
             "mealStartTime" : "12:00:00",
             "mealEndTime" : "12:30:00",
             "mealDescription" : "Meal break",

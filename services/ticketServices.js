@@ -1,6 +1,6 @@
 
 
-const  { OPEN_TICKETS } = require("../constants/ticketDetails");
+const { OPEN_TICKETS } = require("../constants/ticketDetails");
 
 /*
   * if you need to make calls to additional tables, data stores (Redis, for example), 
