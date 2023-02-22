@@ -1,6 +1,6 @@
 const MechanicDetails = require("../common/MechanicDetails");
 const SubAreasDetails = require("../common/SubAreaDetails");
-const ShiftBreakTime = require("../common/ShiftBreakTime");
+const MechanicShiftBreakTime = require("../common/MechanicShiftBreakTime");
 const SHIFT_BREAK_TIMINGS = require("../constants/shift_breaktimings");
 const MECHANIC_DETAILS = require("../constants/mechanic_details");
 
@@ -35,7 +35,7 @@ const getMechanicShiftRecords = async (req, res) => {
             });
             mechanicLists = await MechanicDetails.MechanicDetails(req, res);
             subAreas = await SubAreasDetails.subAreas(req, res);
-            breakList = await ShiftBreakTime.ShiftBreakTime(req, res);
+            breakList = await MechanicShiftBreakTime.MechanicShiftBreakTime(req, res);
 
             if (shiftDetails) {
                 res.send(mechanicShiftRecords = {

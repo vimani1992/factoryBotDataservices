@@ -1,7 +1,7 @@
 const SHIFT_BREAK_TIMINGS = require("../constants/shift_breaktimings");
 const MECHANIC_DETAILS = require("../constants/mechanic_details");
 
-const ShiftBreakTime = async (req, res) => {
+const MechanicShiftBreakTime = async (req, res) => {
 
 
     let userId = req.query.userId;
@@ -36,5 +36,5 @@ const ShiftBreakTime = async (req, res) => {
 }
 
 module.exports = {
-    ShiftBreakTime
+    MechanicShiftBreakTime
 };
