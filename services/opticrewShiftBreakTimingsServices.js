@@ -14,17 +14,24 @@ const getShiftBreakTimings = async (req, res) => {
         //to get the day number 
         daynumber = new Date().getDay()
 
-        SHIFT_BREAK_TIMINGS[daynumber].filter(ele => {
-           // if (formattedTime >= ele.shiftStartTime && formattedTime <= ele.shiftEndTime) {
-                breakList.push({
-                    "breakName": "break 1",
-                    "breakDescription": ele.breakDescription,
-                    "breakStartTime": ele.breakStartTime,
-                    "breakEndTime": ele.breakEndTime
-                });
-                return breakList;
-            //}
-        })
+        SHIFT_BREAK_TIMINGS[daynumber].map(ele => {
+            // if (formattedTime >= ele.shiftStartTime && formattedTime <= ele.shiftEndTime) {
+                 breakList.push({
+                     "shiftNo": ele.shiftNo,
+                     "breakName": ele.breakDescription,
+                     //"breakDescription": ele.breakDescription,
+                     "breakStartTime": ele.breakStartTime,
+                     "breakEndTime": ele.breakEndTime
+                 },{
+                     "shiftNo": ele.shiftNo,
+                     "breakName": ele.mealDescription,
+                     //"breakDescription": ele.mealDescription,
+                     "breakStartTime": ele.mealStartTime,
+                     "breakEndTime": ele.mealEndTime
+                 });
+                 return breakList;
+             //}
+         })
         if (breakList.length > 0) {
             res.send({ "breakList": breakList });
         }
