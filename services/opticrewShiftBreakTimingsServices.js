@@ -15,7 +15,7 @@ const getShiftBreakTimings = async (req, res) => {
         daynumber = new Date().getDay()
 
         SHIFT_BREAK_TIMINGS[daynumber].filter(ele => {
-            if (formattedTime >= ele.shiftStartTime && formattedTime <= ele.shiftEndTime) {
+           // if (formattedTime >= ele.shiftStartTime && formattedTime <= ele.shiftEndTime) {
                 breakList.push({
                     "breakName": "break 1",
                     "breakDescription": ele.breakDescription,
@@ -23,7 +23,7 @@ const getShiftBreakTimings = async (req, res) => {
                     "breakEndTime": ele.breakEndTime
                 });
                 return breakList;
-            }
+            //}
         })
         if (breakList.length > 0) {
             res.send({ "breakList": breakList });
