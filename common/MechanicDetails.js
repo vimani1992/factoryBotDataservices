@@ -2,8 +2,6 @@ const MECHANIC_DETAILS  = require("../constants/mechanic_details");
 const JOB_DETAILS = require('../constants/job_details');
 
 const MechanicDetails= async (req, res) => {
-
-    
     let userId = req.query.userId;
     const mechanicList = []; 
 
@@ -21,7 +19,6 @@ const MechanicDetails= async (req, res) => {
         });
     }
     return mechanicList;
-
 }
 
 module.exports = {

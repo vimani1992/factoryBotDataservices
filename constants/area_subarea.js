@@ -3,40 +3,40 @@ module.exports  = {
             "areaId" : "A001",
             "areaName" : "Area Name 001",
             "subarea" : [
-                "SubArea001",
-                "SubArea002",
-                "SubArea003",
-                "SubArea004"
+                "SubArea0011",
+                "SubArea0012",
+                "SubArea0013",
+                "SubArea0014"
             ]
         },
         "A002" : { 
             "areaId" : "A002",
             "areaName" : "Area Name 002",
             "subarea" : [
-                "SubArea001",
-                "SubArea002",
-                "SubArea003",
-                "SubArea004"
+                "SubArea0021",
+                "SubArea0022",
+                "SubArea0023",
+                "SubArea0024"
             ]
         },
         "A003" : { 
             "areaId" : "A003",
             "areaName" : "Area Name 003",
             "subarea" : [
-                "SubArea001",
-                "SubArea002",
-                "SubArea003",
-                "SubArea004"
+                "SubArea0031",
+                "SubArea0032",
+                "SubArea0033",
+                "SubArea0034"
             ]
         },
         "A004" : { 
             "areaId" : "A004",
             "areaName" : "Area Name 004",
             "subarea" : [
-                "SubArea001",
-                "SubArea002",
-                "SubArea003",
-                "SubArea004"
+                "SubArea0041",
+                "SubArea0042",
+                "SubArea0043",
+                "SubArea0044"
             ]
         }
 };
