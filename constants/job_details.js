@@ -1,4 +1,10 @@
-module.exports = [
+const JOBS_TIMINGS = require('./jobs_timings');
+let d = new Date();
+let currentYear = d.getUTCFullYear();
+let currentMonth = d.getUTCMonth()
+let currentDate = d.getUTCDate();
+
+const jobsData = [
     {
         "scheduleID": "1000073",
         "jobID": 1301,
@@ -528,3 +534,28 @@ module.exports = [
         "faultCode" : "FC001"
     }  
 ];
+
+for(let i=0; i<jobsData.length; i++){
+    if(JOBS_TIMINGS[i]["start_time"] >= "00:00:01" && JOBS_TIMINGS[i]["start_time"] <= "06:01:00"){
+        let currentDateStart = currentDate + 1;
+        jobsData[i].start_time = new Date(currentYear, currentMonth, currentDateStart, JOBS_TIMINGS[i]["start_time"].split(':')[0],JOBS_TIMINGS[i]["start_time"].split(':')[1],JOBS_TIMINGS[i]["start_time"].split(':')[2]).getTime();
+    }
+    else{
+        jobsData[i].start_time = new Date(currentYear, currentMonth, currentDate, JOBS_TIMINGS[i]["start_time"].split(':')[0],JOBS_TIMINGS[i]["start_time"].split(':')[1],JOBS_TIMINGS[i]["start_time"].split(':')[2]).getTime();
+    }
+    if(JOBS_TIMINGS[i]["end_time"] >= "00:00:01" && JOBS_TIMINGS[i]["end_time"] <= "06:01:00"){
+        let currentDateEnd = currentDate + 1;
+        jobsData[i].end_time = new Date(currentYear, currentMonth, currentDateEnd, JOBS_TIMINGS[i]["end_time"].split(':')[0],JOBS_TIMINGS[i]["end_time"].split(':')[1],JOBS_TIMINGS[i]["end_time"].split(':')[2]).getTime();
+    }
+    else{
+        jobsData[i].end_time = new Date(currentYear, currentMonth, currentDate, JOBS_TIMINGS[i]["end_time"].split(':')[0],JOBS_TIMINGS[i]["end_time"].split(':')[1],JOBS_TIMINGS[i]["end_time"].split(':')[2]).getTime();
+    }
+    jobsData[i].estimated_duration = JOBS_TIMINGS[i]["estimated_duration"];
+    jobsData[i].durationwithBreaks = JOBS_TIMINGS[i]["durationwithBreaks"];
+    if( jobsData[i].job_status === "In Progress"){
+        jobsData[i].actualStarttime = jobsData[i].start_time;
+    }
+};
+
+module.exports = jobsData;
+

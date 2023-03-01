@@ -30,6 +30,8 @@ const getMechanicShiftRecords = async (req, res) => {
                     "nextShiftStartTime": shiftTimingDetails.nextShiftStartTime,
                     "shiftStart": shiftTimingDetails.shiftStart,
                     "shiftEnd": shiftTimingDetails.shiftEnd,
+                    "shiftBufferStart": shiftTimingDetails.shiftBufferStart,
+                    "shiftBufferEnd" : shiftTimingDetails.shiftBufferEnd,
                     "mechanicList": mechanicLists,
                     "breakList": breakList
                 }
