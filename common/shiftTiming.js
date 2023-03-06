@@ -23,16 +23,18 @@ const shiftTimings = async (req, res) => {
             if(x.shiftNo === mechShiftNo)
                 return x;
         });
-        mechShiftDetails = mechShiftDetails[0]; //as user will belong to only single shift      
+        mechShiftDetails = mechShiftDetails[0]; //as user will belong to only single shift    
+        
+        
     
-        if(mechShiftNo !== 3 ){
+        if(mechShiftNo === 1 ){
             shiftStart = currentDate + " " + mechShiftDetails.shiftStartTime;
             shiftEnd = currentDate + " " + mechShiftDetails.shiftEndTime;
             nextShiftStartTime = shiftEnd;
         }
         else{
-            if(formattedTime < "23:59:59"){                
-                shiftStart = currentDate + " " + mechShiftDetails.shiftStartTime;
+            if(formattedTime < "23:59:59"){    
+                shiftStart = mechShiftNo === 2 ? currentDate + " " + mechShiftDetails.shiftStartTime : nextDate + " " + mechShiftDetails.shiftStartTime;
                 shiftEnd = nextDate + " " + mechShiftDetails.shiftEndTime;
                 nextShiftStartTime = shiftEnd;
             }

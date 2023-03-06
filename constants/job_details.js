@@ -13,7 +13,7 @@ const jobsData = [
         "orderid": "000054286788",
         "start_time": 1676334600,
         "end_time": 1676340000,
-        "job_status": "In Progress",
+        "job_status": "Not Started",
         "isTravelled": false,
         "criticalRatio": null,
         "criticalPath": 0,
@@ -145,7 +145,7 @@ const jobsData = [
         "orderid": "000054286788",
         "start_time": 1676363400,
         "end_time": 1676370600,
-        "job_status": "In Progress",
+        "job_status": "Not Started",
         "isTravelled": false,
         "criticalRatio": null,
         "criticalPath": 0,
@@ -159,7 +159,7 @@ const jobsData = [
         "lineUnit": null,
         "lineNumber": "Line 1 (1 day)",
         "actualEndtime": null,
-        "actualStarttime": 1676363400,
+        "actualStarttime": null,
         "assigned_mechanics": 1,
         "required_mechanics": 1,
         "subarea": "SubArea0013",
@@ -277,7 +277,7 @@ const jobsData = [
         "orderid": "000054286788",
         "start_time": 1676363400,
         "end_time": 1676372400,
-        "job_status": "In Progress",
+        "job_status": "Not Started",
         "isTravelled": false,
         "criticalRatio": null,
         "criticalPath": 0,
@@ -291,7 +291,7 @@ const jobsData = [
         "lineUnit": null,
         "lineNumber": "Line 1 (1 day)",
         "actualEndtime": null,
-        "actualStarttime": 1676363400,
+        "actualStarttime": null,
         "assigned_mechanics": 1,
         "required_mechanics": 1,
         "subarea": "SubArea0021",
@@ -409,7 +409,7 @@ const jobsData = [
         "orderid": "000054286788",
         "start_time": 1676395800,
         "end_time": 1676403000,
-        "job_status": "In Progress",
+        "job_status": "Not Started",
         "isTravelled": false,
         "criticalRatio": null,
         "criticalPath": 0,
@@ -423,7 +423,7 @@ const jobsData = [
         "lineUnit": null,
         "lineNumber": "Line 1 (1 day)",
         "actualEndtime": null,
-        "actualStarttime": 1676395800,
+        "actualStarttime": null,
         "assigned_mechanics": 1,
         "required_mechanics": 1,
         "subarea": "SubArea0021",
@@ -536,14 +536,14 @@ const jobsData = [
 ];
 
 for(let i=0; i<jobsData.length; i++){
-    if(JOBS_TIMINGS[i]["start_time"] >= "00:00:01" && JOBS_TIMINGS[i]["start_time"] <= "06:01:00"){
+    if(JOBS_TIMINGS[i]["start_time"] >= "00:00:01" && JOBS_TIMINGS[i]["start_time"] <= "08:01:00"){
         let currentDateStart = currentDate + 1;
         jobsData[i].start_time = new Date(currentYear, currentMonth, currentDateStart, JOBS_TIMINGS[i]["start_time"].split(':')[0],JOBS_TIMINGS[i]["start_time"].split(':')[1],JOBS_TIMINGS[i]["start_time"].split(':')[2]).getTime();
     }
     else{
         jobsData[i].start_time = new Date(currentYear, currentMonth, currentDate, JOBS_TIMINGS[i]["start_time"].split(':')[0],JOBS_TIMINGS[i]["start_time"].split(':')[1],JOBS_TIMINGS[i]["start_time"].split(':')[2]).getTime();
     }
-    if(JOBS_TIMINGS[i]["end_time"] >= "00:00:01" && JOBS_TIMINGS[i]["end_time"] <= "06:01:00"){
+    if(JOBS_TIMINGS[i]["end_time"] >= "00:00:01" && JOBS_TIMINGS[i]["end_time"] <= "08:01:00"){
         let currentDateEnd = currentDate + 1;
         jobsData[i].end_time = new Date(currentYear, currentMonth, currentDateEnd, JOBS_TIMINGS[i]["end_time"].split(':')[0],JOBS_TIMINGS[i]["end_time"].split(':')[1],JOBS_TIMINGS[i]["end_time"].split(':')[2]).getTime();
     }
@@ -552,9 +552,6 @@ for(let i=0; i<jobsData.length; i++){
     }
     jobsData[i].estimated_duration = JOBS_TIMINGS[i]["estimated_duration"];
     jobsData[i].durationwithBreaks = JOBS_TIMINGS[i]["durationwithBreaks"];
-    if( jobsData[i].job_status === "In Progress"){
-        jobsData[i].actualStarttime = jobsData[i].start_time;
-    }
 };
 
 module.exports = jobsData;
