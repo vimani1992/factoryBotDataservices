@@ -15,5 +15,6 @@ router.get('/subarea',opticrewSubareaController.getSubareaDetails);
 router.get('/mechanicdetails',opticrewMechanicDetailsController.getMechanicDetails);
 router.get('/shiftbreaktimings',opticrewShiftBreakTimingsController.getShiftBreakTimings);
 router.get('/mechanicShiftRecords',opticrewMechanicShiftRecordsController.getMechanicShiftRecords);
+router.get('/jobStatusUpdate',opticrewjobStatusUpdateController.jobStatusUpdate);
 
 module.exports = router
