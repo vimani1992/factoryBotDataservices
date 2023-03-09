@@ -5,6 +5,7 @@ const opticrewSubareaController = require('../controllers/opticrewSubareaControl
 const opticrewMechanicDetailsController = require('../controllers/opticrewMechanicDetailsController');
 const opticrewShiftBreakTimingsController = require('../controllers/opticrewShiftBreakTimingsController');
 const opticrewMechanicShiftRecordsController=require('../controllers/opticrewMechanicShiftRecordsController');
+const opticrewjobStatusUpdateController =require('../controllers/opticrewjobStatusUpdateController');
 
 const router = express.Router()
 
@@ -15,6 +16,6 @@ router.get('/subarea',opticrewSubareaController.getSubareaDetails);
 router.get('/mechanicdetails',opticrewMechanicDetailsController.getMechanicDetails);
 router.get('/shiftbreaktimings',opticrewShiftBreakTimingsController.getShiftBreakTimings);
 router.get('/mechanicShiftRecords',opticrewMechanicShiftRecordsController.getMechanicShiftRecords);
-router.get('/jobStatusUpdate',opticrewjobStatusUpdateController.jobStatusUpdate);
+router.post('/jobStatusUpdate',opticrewjobStatusUpdateController.jobStatusUpdate);
 
 module.exports = router
