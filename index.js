@@ -17,8 +17,8 @@ const app = express();
 const opticrewRoutes = require('./routes/opticrew');
 const cors = require('cors')
 
-//const port = process.env.PORT;
-const port = 3000;
+const port = process.env.PORT;
+// const port = 8080;
 app.use(bodyParser.json());
 app.get('/', (req, res) => res.send('App is working'))
 
